@@ -118,7 +118,7 @@ a:hover {
 
 body {
     max-width: 768px;
-    padding: 75px 25px 75px 25px;
+    padding: 2.2em 1.2em 2.2em 1.2em;
     margin: 0 auto;
     background: #fff;
     color: #000;
@@ -126,20 +126,32 @@ body {
 }
 
 h1 {
+    margin-bottom: 0.5em;
     font-size: 5em;
     font-weight: 100;
     color: #ff1c76;
 }
 
 p.large {
+    margin-bottom: 1em;
     font-size: 1.5em;
     font-weight: 500;
-    margin-bottom: 1em;
 }
 
 p {
-    font-weight: 400;
     margin-bottom: 1.5em;
+    font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 0em 1.2em 2.2em 1.2em;
+    }
+
+    h1 {
+        margin-bottom: 0.2em;
+        font-size: 4em;
+    }
 }
 
 /* ==========================================================================
