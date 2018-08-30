@@ -133,7 +133,7 @@ body {
 }
 
 header {
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 4em;
 }
 header, footer, article, nav, div {
@@ -204,6 +204,10 @@ header, footer, article, nav, div {
 .grid .summary,
 .grid-text .summary {
     padding: 10px 30px 25px 30px;
+    font-size: 0.9em;
+}
+.grid .tags-summary {
+    padding: 10px 30px 10px 30px;
     font-size: 0.9em;
 }
 .grid .summary-text {
@@ -290,6 +294,12 @@ header, footer, article, nav, div {
     top: 0.5em;
     position: relative;
 }
+.icon.pixel svg, .icon.pixel img {
+    height: 2.0em;
+    width: 2.0em;
+    margin-bottom: 2.0em;
+    fill: currentColor;
+}
 
 .blurb {
     font-size: 0.8em;
@@ -336,15 +346,16 @@ header, footer, article, nav, div {
 /* text */
 
 a {
-    color: #428bca;
+    color: #4286f4;
 }
 a:hover {
-    color: #428bca;
+    color: #4286f4;
     text-decoration: none;
 }
 h1 {
     margin-bottom: 0.5em;
     font-size: 6em;
+    letter-spacing: -0.01em;
     color: #ff1c76;
 }
 h1 > .large {
