@@ -295,6 +295,7 @@ header, footer, article, nav, div {
 .icon.baseline svg, .icon img {
     top: 0.5em;
     position: relative;
+    z-index: -1;
 }
 .icon.pixel svg, .icon.pixel img {
     height: 2.0em;
@@ -348,20 +349,31 @@ header, footer, article, nav, div {
 /* text */
 
 a {
-    color: #4286f4;
+    color: #222;
     text-decoration: none;
-    border-bottom: 0.5px solid #4286f4;
+    border-bottom: 2px solid #4286f4;
+    -webkit-box-shadow: 0px -1px 0px #4286f4 inset;
+            box-shadow: 0px -1px 0px #4286f4 inset;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 a.navlink {
     border-bottom: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 a:hover {
-    color: #4286f4;
+    color: #ff1c76;
     text-decoration: none;
-    border-bottom: none;
+    border-bottom: 2px solid #ff1c76;
+    -webkit-box-shadow: 0px -1px 0px #ff1c76 inset;
+            box-shadow: 0px -1px 0px #ff1c76 inset;
 }
 a.navlink:hover {
     border-bottom: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 h1 {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -425,6 +437,12 @@ p.small {
 
 /* viewports */
 
+@media (min-width: 1196px) {
+    .menuToggleContainer,
+    #menuToggle {
+        visibility: hidden;
+    }
+}
 @media (max-width: 1196px) {
     #pageHeader,
     #pageArticle,
@@ -447,6 +465,10 @@ p.small {
         margin-left: 0.1em;
         font-size: 2em;
     }
+    .menuToggleContainer,
+    #menuToggle {
+        visibility: hidden;
+    }
 }
 @media (max-width: 986px) {
     #pageHeader,
@@ -465,6 +487,10 @@ p.small {
         margin-left: 0.1em;
         font-size: 1.8em;
     }
+    .menuToggleContainer,
+    #menuToggle {
+        visibility: hidden;
+    }
 }
 @media (max-width: 768px) {
     body {
@@ -480,13 +506,17 @@ p.small {
         margin-left: 0.1em;
         font-size: 1.5em;
     }
+    .menuToggleContainer,
+    #menuToggle {
+        visibility: hidden;
+    }
 }
 @media all and (max-width: 575px) {
     #pageHeader {
         margin-bottom: 10em;
     }
     header {
-        padding-top: 0em;
+        padding-top: 3em;
     }
     h1 {
         margin-bottom: 0.2em;
@@ -510,6 +540,110 @@ p.small {
     .footer {
         margin-bottom: 5em;
     }
+    .menuToggleContainer,
+    #menuToggle {
+        visibility: visible;
+    }
+}
+
+/* ==========================================================================
+   Veggieburger menu
+   ========================================================================== */
+
+/* original code by Erik Terwan, MIT License */
+
+.menuToggleContainer {
+  display: block;
+  position: fixed;
+  top: 31px;
+  left: 36px;
+  height: 60px;
+  width: 60px;
+  background: #333;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 20; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 10;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+/* transform all the slices into a crossmark */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+/* hide the middle one */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/* last one should go in the other direction */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu {
+  position: absolute;
+  width: 220px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased; /* stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#menu li {
+  padding: 5px 0;
+  font-size: 18px;
+}
+/* slide from the left */
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
 
 /* ==========================================================================
