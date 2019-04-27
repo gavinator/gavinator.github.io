@@ -121,6 +121,9 @@ body {
     background: #fff;
     color: #000;
     font-family: 'Roboto', sans-serif;
+    background: url('../img/poke-in.svg') no-repeat; /* poke-in */
+    background-size: 165px 300px;
+    background-position: top 4.5em right;
 }
 @media all and (max-width: 575px) {
   body {
@@ -444,6 +447,10 @@ p.small {
     }
 }
 @media (max-width: 1196px) {
+    body {
+        background-size: 145px 280px; /* poke-in */
+        background-position: top 3em right;
+    }
     #pageHeader,
     #pageArticle,
     #pageFooter {
@@ -471,6 +478,10 @@ p.small {
     }
 }
 @media (max-width: 986px) {
+    body {
+        background-size: 125px 260px; /* poke-in */
+        background-position: top 2em right;
+    }
     #pageHeader,
     #pageArticle,
     #pageFooter {
@@ -495,6 +506,8 @@ p.small {
 @media (max-width: 768px) {
     body {
         padding-left: 1.2em;
+        background-size: 105px 240px; /* poke-in */
+        background-position: top 0.5em right;
     }
     .sidenav {
         padding-left: 1.8em;
@@ -509,6 +522,11 @@ p.small {
     .menuToggleContainer,
     #menuToggle {
         visibility: hidden;
+    }
+}
+@media all and (max-width: 700px) {
+    body {
+        background: none; /* poke-in */
     }
 }
 @media all and (max-width: 575px) {
