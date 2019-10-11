@@ -268,7 +268,7 @@ header, footer, article, nav, div {
     padding: 0px 0px 0px 0px;
 }
 .item > .title {
-    margin-top: 2em;
+    margin-top: 2.2em;
     font-size: 1.3em;
     font-weight: 500;
     margin-bottom: 0em;
@@ -309,6 +309,11 @@ header, footer, article, nav, div {
 
 .blurb {
     font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.blurb-footer {
+    font-size: 1.1em;
     font-weight: 300;
     line-height: 1.5em;
 }
@@ -433,7 +438,7 @@ h3 {
     line-height: 1em;
 }
 h3.text-grid {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.4em;
 }
 p {
     margin-bottom: 1.5em;
