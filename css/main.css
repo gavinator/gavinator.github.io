@@ -281,7 +281,15 @@ article img.img-right {
 }
 .verbiage-grid {
     max-width: 768px;
-    margin-bottom: 0em;
+    margin-bottom: 0em; /* section spacing */
+}
+.verbiage-pregrid-insert {
+    max-width: 768px;
+    margin-bottom: 0em; /* section spacing */
+}
+.verbiage-grid-insert {
+    max-width: 768px;
+    margin-bottom: -1em; /* section spacing */
 }
 .item {
     margin: 0px 0px 0px 0px;
@@ -526,7 +534,9 @@ p.small {
         padding-right: 0em;
     }
     .verbiage,
-    .verbiage-grid {
+    .verbiage-grid,
+    .verbiage-pregrid-insert,
+    .verbiage-grid-insert {
         padding-right: 2.4em;
     }
     .grid-photos {
@@ -624,7 +634,9 @@ p.small {
         display: none;
     }
     .verbiage,
-    .verbiage-grid {
+    .verbiage-grid,
+    .verbiage-pregrid-insert,
+    .verbiage-grid-insert {
         padding-right: 3em;
     }
     .verbiage {
