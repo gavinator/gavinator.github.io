@@ -94,7 +94,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Styles
    ========================================================================== */
 
 ::selection {
@@ -158,6 +158,68 @@ header, footer, article, nav, div {
 }
 #pageFooter {
     grid-area: footer;
+}
+
+
+/* readmore ('show more' button) */
+
+.complete {
+    display:none;
+}
+.readmore-margin {
+    margin-top: 3.6em;
+}
+.readmore-margin-small {
+    margin-top: 2em;
+}
+.readmore-employment,
+.readmore-projects-client,
+.readmore-projects-grant,
+.readmore-talks,
+.readmore-exhibitions,
+.readmore-venues-books,
+.readmore-venues-articles,
+.readmore-venues-broadcasts,
+.readmore-grants,
+.readmore-awards,
+.readmore-education,
+.readmore-advisory {
+    border: 1px solid #ff1c76;
+    border-radius: 40px;
+    color: #ff1c76;
+    font-size: 1.1em;
+    padding: 10px;
+    cursor: pointer;
+}
+.readmore-employment:hover,
+.readmore-projects-client:hover,
+.readmore-projects-grant:hover,
+.readmore-talks:hover,
+.readmore-exhibitions:hover,
+.readmore-venues-books:hover,
+.readmore-venues-articles:hover,
+.readmore-venues-broadcasts:hover,
+.readmore-grants:hover,
+.readmore-awards:hover,
+.readmore-education:hover,
+.readmore-advisory:hover {
+    border: 1px solid #ff1c76;
+    background-color: #ffe8f1;
+    -webkit-box-shadow: 0px -2px 0px #ff1c76 inset;
+            box-shadow: 0px -2px 0px #ff1c76 inset;
+    color: #ff1c76;
+    cursor: pointer;
+}
+.verbiage-readmore { /* reduces spacing between grid and button */
+    margin-top: -26em;
+    margin-bottom: 5em !important;
+}
+.verbiage-readmore-terminus {
+    margin-top: -26em;
+    margin-bottom: 28em !important;
+}
+.article-readmore { /* further tweaks spacing between grid and button; see mobile for additional adjustments */
+    margin-top: -27px;
 }
 
 /* grids */
@@ -291,6 +353,7 @@ article img.img-right {
     max-width: 768px;
     margin-bottom: -1em; /* section spacing */
 }
+
 .item {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -502,6 +565,7 @@ p.small {
     font-size: 0.8em;
     font-weight: 300;
     color: #888;
+    height: 10em;
 }
 .highlight {
     background-image: -webkit-linear-gradient(270deg,#fff2d6,#fff2d6);
@@ -582,6 +646,11 @@ p.small {
     .menuToggleContainer,
     #menuToggle {
         visibility: hidden;
+    }
+}
+@media (max-width: 933px) {
+    .article-readmore-mobile { /* adjusts top spacing for second grid item for readmore */
+        margin-top: 0px;
     }
 }
 @media (max-width: 768px) {
