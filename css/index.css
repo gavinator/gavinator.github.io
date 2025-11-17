@@ -498,10 +498,10 @@ a.navlink:hover {
 h1 {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     margin-bottom: 0em;
-    font-size: 13.8em;
+    font-size: 11em;
     font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1em;
+    letter-spacing: -0.04em;
+    line-height: 1.15em;
     color: #ff1c76; /* non-webkit fallback */
     background: #ff1c76; /* non-webkit fallback */
     background: linear-gradient(135deg, rgba(255,28,118,1) 0%, rgba(255,28,118,1) 25%, rgba(252,176,69,1) 50%);
