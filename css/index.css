@@ -535,6 +535,14 @@ p {
     font-size: 1.1em;
     font-weight: 300;
 }
+p.extralarge {
+    max-width: 768px;
+    margin-bottom: 1em;
+    margin-left: 0.2em;
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #222;
+}
 p.large {
     max-width: 768px;
     margin-bottom: 1em;
@@ -542,6 +550,14 @@ p.large {
     font-size: 2.2em;
     font-weight: 500;
     color: #222;
+}
+p.medium {
+    max-width: 768px;
+    margin-bottom: 1em;
+    margin-left: 0.2em;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #444;
 }
 p.footerLarge {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -635,10 +651,20 @@ p.small {
     p.footerLarge {
         font-size: 8em;
     }
+    p.extralarge {
+        margin-right: 4em;
+        margin-left: 0.1em;
+        font-size: 2em;
+    }
     p.large {
         margin-right: 4em;
         margin-left: 0.1em;
         font-size: 2em;
+    }
+    p.medium {
+        margin-right: 4em;
+        margin-left: 0.1em;
+        font-size: 1.3em;
     }
     .menuToggleContainer,
     #menuToggle {
@@ -673,9 +699,17 @@ p.small {
     p.footerLarge {
         font-size: 7em;
     }
+    p.extralarge {
+        margin-left: 0.1em;
+        font-size: 2em;
+    }
     p.large {
         margin-left: 0.1em;
         font-size: 2em;
+    }
+    p.medium {
+        margin-left: 0.1em;
+        font-size: 1.3em;
     }
     .menuToggleContainer,
     #menuToggle {
@@ -720,9 +754,17 @@ p.small {
         font-size: 5em;
         line-height: 2em;
     }
+    p.extralarge {
+        margin-left: 0.1em;
+        font-size: 1.5em;
+    }
     p.large {
         margin-left: 0.1em;
         font-size: 1.5em;
+    }
+    p.medium {
+        margin-left: 0.1em;
+        font-size: 1.1em;
     }
     .item > .sectionTitle {
         font-size: 1.5em;
