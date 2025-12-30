@@ -469,6 +469,13 @@ a.navlink:hover {
     word-break: break-word;
     word-wrap: break-word;
 }
+.large a {
+    display: inline-block;
+}
+.large a:first-child {
+    margin-right: 1.2em;
+    margin-bottom: 0.5em;
+}
 .article-spacer {
     height: 39px;
 }
@@ -536,11 +543,11 @@ p {
     font-weight: 300;
 }
 p.extralarge {
-    max-width: 768px;
+    max-width: 996px;
     margin-bottom: 1em;
     margin-left: 0.2em;
-    font-size: 2.2em;
-    font-weight: 500;
+    font-size: 2.6em;
+    font-weight: 400;
     color: #222;
 }
 p.large {
