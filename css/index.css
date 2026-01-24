@@ -566,7 +566,7 @@ p.extralarge {
     font-weight: 500;
     color: #222;
 }
-p.extralargeTitle {
+.extralargeTitle { /* portfolio title */
     margin-left: 0.1em;
 }
 p.large {
