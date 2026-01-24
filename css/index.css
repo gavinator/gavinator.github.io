@@ -12,6 +12,7 @@
 
 html {
     color: #222;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 1em;
     line-height: 1.4;
     scroll-behavior: smooth;
@@ -840,6 +841,10 @@ p.small {
     }
     #pageFooter {
         padding-right: 2em;
+    }
+    .responsive-grid-container { /* portfolio grid */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 66%;
     }
     .footerPortfolio { /* portfolio grid */
         margin-top: 12em;
