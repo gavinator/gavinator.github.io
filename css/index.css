@@ -566,9 +566,6 @@ p.extralarge {
     font-weight: 500;
     color: #222;
 }
-.extralargeTitle { /* portfolio title */
-    margin-left: 0.1em;
-}
 p.large {
     max-width: 768px;
     margin-bottom: 1em;
@@ -849,7 +846,7 @@ p.small {
         width: 66%;
     }
     .grid-item {
-        padding: 20px 40px 20px 20px;
+        padding: 20px 20px 20px 20px;
     }
     .footerPortfolio {
         margin-top: 12em;
