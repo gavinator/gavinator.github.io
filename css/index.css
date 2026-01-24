@@ -563,7 +563,7 @@ p.extralarge {
     margin-bottom: 1em;
     margin-left: 0.2em;
     font-size: 2.6em;
-    font-weight: 400;
+    font-weight: 500;
     color: #222;
 }
 p.extralargeTitle {
@@ -842,11 +842,16 @@ p.small {
     #pageFooter {
         padding-right: 2em;
     }
-    .responsive-grid-container { /* portfolio grid */
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    /* portfolio grid */
+    .responsive-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         width: 66%;
     }
-    .footerPortfolio { /* portfolio grid */
+    .grid-item {
+        padding: 20px 40px 20px 20px;
+    }
+    .footerPortfolio {
         margin-top: 12em;
     }
 }
